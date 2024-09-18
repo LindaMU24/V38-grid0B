@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dice {
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1rem);
+    grid-template-rows: repeat(3, 1rem);
+    gap: .5rem;
+}
+.dice aside {
+    background: #353335;
+    border-radius: 99rem;
+}
+
+.dice aside:nth-child(1) { grid-area: dot-1; }
+.dice aside:nth-child(2) { grid-area: dot-2; }
+.dice aside:nth-child(3) { grid-area: dot-3; }
+.dice aside:nth-child(4) { grid-area: dot-4; }
+.dice aside:nth-child(5) { grid-area: dot-5; }
+.dice aside:nth-child(6) { grid-area: dot-6; }
+
+.dice.dots-1 {
+    grid-template-areas:
+    ". . ."
+    ". dot-1 ."
+    ". . .";
+}/* Tärning 1 hit */
+.dice.dots-2 {
+    grid-template-areas: 
+    "dot-1 . ."
+    ". . ."
+    ". . dot-2";
+} /* Tärning 2 hit */
+.dice.dots-3 {
+    grid-template-areas: 
+    "dot-1 . ."
+    ". dot-2 ."
+    ". . dot-3";
+} /* Tärning 3 hit */
+.dice.dots-4 {
+    grid-template-areas: 
+    "dot-1 . dot-2"
+    ". . ."
+    "dot-3 . dot-4";
+}/* Tärning 4 hit */
+.dice.dots-5 {
+    grid-template-areas: 
+    "dot-1 . dot-2"
+    ". dot-3 ."
+    "dot-4 . dot-5";
+} /* Tärning 5 hit */
+.dice.dots-6 {
+    grid-template-areas: 
+    "dot-1 . dot-2"
+    "dot-3 . dot-4"
+    "dot-5 . dot-6";
+} /* Tärning 6 hit */
